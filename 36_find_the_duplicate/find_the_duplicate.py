@@ -13,3 +13,25 @@ def find_the_duplicate(nums):
         >>> find_the_duplicate([2, 1, 3, 4]) is None
         True
     """
+    indx_1 = 0
+    indx_2 = 1
+
+    nums = sorted(nums)
+
+    ptr_1 = nums[indx_1]
+    ptr_2 = nums[indx_2]
+    
+    
+
+    while ptr_1 != ptr_2:
+        
+        indx_1+=1
+        indx_2+=1
+
+        if indx_2 == len(nums):
+            return None
+
+        ptr_1 = nums[indx_1]
+        ptr_2 = nums[indx_2]
+    
+    return ptr_1

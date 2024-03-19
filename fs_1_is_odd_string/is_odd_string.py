@@ -29,3 +29,10 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    sum_of_charpos = 0
+    word = str(word)
+    for x in word:
+        sum_of_charpos += ord(x)
+    
+    return sum_of_charpos % 2 != 0

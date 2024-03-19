@@ -21,3 +21,10 @@ def is_palindrome(phrase):
         >>> is_palindrome('Noon')
         True
     """
+
+    phrase = str(phrase)
+    temp_phrase = phrase.lower().replace(" ", "")
+    esarhp_pmet = temp_phrase[::-1]
+    if temp_phrase == esarhp_pmet:
+        return True
+    return False

@@ -10,3 +10,19 @@ def same_frequency(num1, num2):
         >>> same_frequency(1212, 2211)
         True
     """
+    frequencies_num1 = dict()
+    frequencies_num2 = dict()
+
+    for digit in list(str(num1)):
+        if (frequencies_num1.get(digit)):
+            frequencies_num1[digit] += 1
+        else:
+            frequencies_num1[digit] = 1
+
+    for digit in list(str(num2)):
+        if (frequencies_num2.get(digit)):
+            frequencies_num2[digit] += 1
+        else:
+            frequencies_num2[digit] = 1
+
+    return (frequencies_num1 == frequencies_num2)

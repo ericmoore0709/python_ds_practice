@@ -7,3 +7,6 @@ def last_element(lst):
         >>> last_element([]) is None
         True
     """
+    if len(lst):
+        return lst.pop()
+    return None
